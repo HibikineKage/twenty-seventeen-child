@@ -1,7 +1,7 @@
 <?php
 require 'theme-update-checker.php';
 $update_checker = new ThemeUpdateChecker(
-    'twenty-seventeen-child',
+    'twenty-seventeen-child-master',
     'https://raw.githubusercontent.com/HibikineKage/twenty-seventeen-child/master/update-info.json'
 );
 
