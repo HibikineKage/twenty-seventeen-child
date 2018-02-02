@@ -11,3 +11,14 @@
  Tags:        
  Text Domain: twenty-seventeen-hibikines-child
 */
+.custom-logo {
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+}
+
+.menu-item-available {
+  border-bottom: #801176 2px;
+}
+
+.menu-item-available > a {
+  padding-bottom: calc(1em - 2px);
+}
