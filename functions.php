@@ -30,7 +30,7 @@ function theme_customizer_extension($wp_customize)
         'transport' => 'refresh',
     ]);
     $wp_customize->add_control('theme-color', [
-        'section' => 'color',
+        'section' => 'colors',
         'settings' => 'theme-color',
         'label' => 'Theme Color',
         'description' => 'Set "theme-color" meta tag. Change tab color. This affects only android chrome.',
