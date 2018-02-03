@@ -45,6 +45,7 @@ function theme_customize_header()
         <meta name="theme-color" content="<?php echo get_theme_mod('theme-color', '#000000'); ?>" />
     <?php
 }
+add_action('wp_head', 'theme_customize_header');
 
 /**
  * <meta name="generator" content="Wordpress 4.0">のようなタグを削除します。
