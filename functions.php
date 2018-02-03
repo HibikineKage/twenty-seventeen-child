@@ -19,6 +19,32 @@ function theme_enqueue_styles()
     );
 }
 
+/**
+ * テーマのカスタマイズ時に出るメニューを追加します。
+ * @param $wp_customize
+ */
+function theme_customizer_extension($wp_customize)
+{
+    $wp_customize->add_control('theme-color', [
+        'section' => 'color',
+        'settings' => 'theme-color',
+        'label' => 'Theme Color',
+        'description' => 'Set "theme-color" meta tag. Change tab color. This affects only android chrome.',
+        'type' => 'color',
+    ]);
+    $wp_customize->add_setting('theme-color', [
+        'default' => '#000000',
+        'transport' => 'refresh',
+    ]);
+}
+add_action('customize_register', 'theme_customizer_extension');
+
+function theme_customize_header()
+{
+    ?>
+        <meta name="theme-color" content="<?php echo get_theme_mod('theme-color', '#000000'); ?>" />
+    <?php
+}
 
 /**
  * <meta name="generator" content="Wordpress 4.0">のようなタグを削除します。
